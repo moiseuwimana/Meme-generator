@@ -1,0 +1,18 @@
+1.How would you describe the concept of "state"?
+ANSWER: A way for React to remember saved values from within a component. This is similar to declaring variables from within a component, with a few added bonuses (which we'll get to later)
+
+
+2. When would you want to use props instead of state?
+ANSWER: Anytime you want to pass dat into a component so that component can determine what will get diplayed on the screen.
+
+
+
+3. When would you want to use state instead of props?
+ANSWER: Anytime you want a component to maintain some values from within the component. (And "remember" those values even when when React re-renders the component)
+
+
+
+
+
+4. What does "immutable" mean? Are props immutable? Is state immutable?
+ANSWER: Unchanging. Props are immutable. State is mutable.
