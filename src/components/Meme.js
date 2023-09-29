@@ -1,11 +1,15 @@
+import React from 'react'
 import memesData from "../memesData"
 
 export default function Meme() {
-  function getMemeImage(){
+  // creating new state called `memeImage` with an empty string as default.
+  let [memeImage, setMemeImage] = React.useState("")
+  function GetMemeImage(){
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-    const url = memesArray[randomNumber].url;
-    console.log(url)
+    // When the getMemeImage function is called, it updates the `memeImage` state to be the random chosen image URL
+    setMemeImage(memesArray[randomNumber].url
+    ) // if the previous state is not needed then callback function is not necessary.
   }
   return (
     <main>
@@ -14,8 +18,9 @@ export default function Meme() {
         <input className="form--input" type="text" placeholder="Bottom text"/>
         <button 
         className="form--button"
-        onClick={getMemeImage}
+        onClick={GetMemeImage}
         >Get a new meme image </button>
+        <img className='meme--image' src={memeImage} />
       </div>
     </main>
   )
